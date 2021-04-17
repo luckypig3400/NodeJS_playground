@@ -9,3 +9,5 @@ http.createServer(function (req, res) {
   var txt = q.year + " " + q.month;
   res.end(txt);
 }).listen(8080);
+
+// open http://localhost:8080/?year=2017&month=July in browser
