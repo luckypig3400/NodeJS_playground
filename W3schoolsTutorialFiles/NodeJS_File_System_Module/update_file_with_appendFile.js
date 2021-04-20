@@ -5,4 +5,5 @@ fs.appendFile('mynewfile1.txt', 'This is new text append at ' + Date() + '\n',
         if (err) throw err;
         console.log('Updated!');
     }
-);
+);// The fs.appendFile() method appends the specified
+// content at the end of the specified file.
