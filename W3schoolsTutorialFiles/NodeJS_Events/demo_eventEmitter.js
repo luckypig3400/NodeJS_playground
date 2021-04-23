@@ -1,5 +1,9 @@
 var events = require('events');
 var eventEmitter = new events.EventEmitter();
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+});//https://www.codecademy.com/articles/getting-user-input-in-node-js
 
 //Create an event handler:
 var myEventHandler = function () {
@@ -15,12 +19,24 @@ eventEmitter.emit('scream');
 var helloEventHandler = function () {
     console.log('Hello World~');
 }
-var worldEventHandler = function () {
+var hiEventHandler = function () {
     console.log('World~ Hello from Node.js');
+}
+var oopsEventHandler = function () {
+    console.log('Oops! I don\'t understand that ...');
 }
 
 eventEmitter.on('hello', helloEventHandler);
-eventEmitter.on('world', worldEventHandler);
+eventEmitter.on('hi', hiEventHandler);
+eventEmitter.on('oops', oopsEventHandler);
 
-eventEmitter.emit('hello');
-eventEmitter.emit('world');
+readline.question('Hello~ Please greet to me(hello/hi):', answer => {
+    if (answer == 'hello')
+        eventEmitter.emit('hello');
+    else if (answer == 'hi')
+        eventEmitter.emit('hi');
+    else
+        eventEmitter.emit('oops');
+
+    readline.close();
+});
