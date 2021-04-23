@@ -53,7 +53,7 @@ var eventEmitter = new events.EventEmitter();
 
 //Create an event handler:
 var myEventHandler = function () {
-    console.log('T hear a scream!');
+    console.log('I hear a scream!');
 }
 
 //Assign the event handler to an event:
