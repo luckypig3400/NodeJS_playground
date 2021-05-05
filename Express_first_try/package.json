@@ -1,0 +1,14 @@
+{
+  "name": "express_first_try",
+  "version": "1.0.0",
+  "description": "project base on Express Framwork first try",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express"
+  ],
+  "author": "luckypig",
+  "license": "ISC"
+}
