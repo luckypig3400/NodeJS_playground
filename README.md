@@ -8,7 +8,19 @@ Type in Command Line
 ```
 npx create-react-app [your_project_name]
 ```
-+ 3:36 => https://www.youtube.com/watch?v=iRaelG7v0OU
++ Ref: 3:36 => https://www.youtube.com/watch?v=iRaelG7v0OU
+
+## 使用express generator建立express專案
+前置作業
+```
+npm install express-generator -g
+```
+Type in Command Line
+```
+
+```
++ Ref: https://developer.mozilla.org/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment#installing_the_express_application_generator
+
 
 ## Search Keywords
 + node js async function
