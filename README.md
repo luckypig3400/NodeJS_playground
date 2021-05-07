@@ -3,6 +3,13 @@
 
 ## [W3Schools NodeJS Tutorial](https://www.w3schools.com/nodejs/default.asp)
 
+## Node.js MySQL
+### Install required package
+```
+npm install mysql
+```
+### 
+
 ## 使用npx建立react app專案
 Type in Command Line
 ```
