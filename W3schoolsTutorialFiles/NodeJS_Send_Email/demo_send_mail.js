@@ -12,7 +12,7 @@ var mailOptions = {
     from: 'nodejsMailSender666@gmail.com',
     to: 'myfriend@yahoo.com, lucky@gmail.com, 666@gmail.com',
     subject: 'Sending Email using Node.JS 酷耶~',
-    text: 'That was Easy!'
+    html: '<h1>Welcome</h1><h3>This is the test mail sent from NodeJS Bot</h3><p>That was Easy!</p>'
 };
 
 transporter.sendMail(mailOptions, function (error, info) {
