@@ -1,0 +1,23 @@
+{
+    "resourceType": "Patient",
+    "name": [
+        {
+            "use": "official",
+            "text": "Ossas"
+        },
+        {
+            "use": "official",
+            "text": "歐薩斯",
+            "family": "歐",
+            "given": [
+                "薩斯"
+            ]
+        }
+    ],
+    "photo": [
+        {
+            "contentType": "image",
+            "url": "https://i.imgur.com/VeTQheO.png"
+        }
+    ]
+}
