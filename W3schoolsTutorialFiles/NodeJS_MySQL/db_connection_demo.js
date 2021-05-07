@@ -1,5 +1,5 @@
 var mysql = require('mysql');
-
+// The following account must exists in MySQL!
 var con = mysql.createConnection({
     host: "localhost",
     user: "nodejsUser",

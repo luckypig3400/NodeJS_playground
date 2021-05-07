@@ -8,7 +8,10 @@
 ```
 npm install mysql
 ```
-### 
+### 在電腦上安裝MySQL(也可用XAMPP)
+**單獨安裝MySQL可參考這篇:**
++ https://jerrynest.io/windows-mysql-installer/
+###
 
 ## 使用npx建立react app專案
 Type in Command Line
@@ -24,7 +27,7 @@ npm install express-generator -g
 ```
 Type in Command Line
 ```
-
+express [your_project_name]
 ```
 + Ref: https://developer.mozilla.org/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment#installing_the_express_application_generator
 
