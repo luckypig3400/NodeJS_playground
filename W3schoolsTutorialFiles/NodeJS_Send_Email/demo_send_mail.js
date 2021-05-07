@@ -1,5 +1,5 @@
 var nodemailer = require('nodemailer');
-
+// 讓nodemailer存取Gmail帳號:https://nodemailer.com/usage/using-gmail/
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
