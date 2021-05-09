@@ -9,7 +9,9 @@ var con = mysql.createConnection({
 con.connect(function (err) {
     if (err) throw err;
     console.log("Connected!");
-    con.query("CREATE DATABASE mynodejsDB", function (err, result) {
+    
+    var sqlCommand = "CREATE DATABASE IF NOT EXISTS mynodejsDB";
+    con.query(sqlCommand, function (err, result) {
         if (err) throw err;
         console.log("Database created!");
     });
