@@ -29,8 +29,8 @@ con.connect(function (err) {
         ['Chuck', 'Main Road 989'],
         ['Viola', 'Sideway 1633']
     ];
-    con.query(sql, function (err, result) {
+    con.query(sql, [values], function (err, result) {
         if (err) throw err;
-        console.log("1 record inserted");
+        console.log(result.affectedRows + " records inserted!");
     });
 });
