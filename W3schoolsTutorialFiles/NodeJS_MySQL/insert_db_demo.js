@@ -33,6 +33,18 @@ con.connect(function (err) {
         if (err) throw err;
         console.log(result.affectedRows + " records inserted!");
     });
+    // Get Inserted ID
+    // For tables with an auto increment id field, 
+    // you can get the id of the row you just inserted 
+    // by asking the result object.
+    var sql2 = "INSERT INTO customers(name, address)" +
+        "VALUES ('Michelle', 'Blue Village 1')";
+    con.query(sql2, function (err, result) {
+        if (err) throw err;
+        console.log("1 record inserted, ID:" + result.insertID);
+    });
+    // NOTE: To be able to get the inserted id, 
+    // only one row can be inserted.
 });
 
 /*
