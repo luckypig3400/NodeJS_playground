@@ -11,11 +11,13 @@ con.connect(function (err) {
     if (err) throw err;
     console.log("Connected & Used Database 'mynodejsDB'");
 
-    var sql = "CREATE TABLE IF NOT EXISTS " +
+    var sql_createTB = "CREATE TABLE IF NOT EXISTS " +
         "customers(id INT AUTO_INCREMENT PRIMARY KEY, " +
         "name VARCHAR(255), address varchar(255))";
-    con.query(sql, function (err, result) {
+    var sql_alterTB = "ALTER TABLE customers " +
+        "ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY";
+    con.query(sql_alterTB, function (err, result) {
         if (err) throw err;
-        console.log("Table created!");
+        console.log("Table altered!");
     });
 });
