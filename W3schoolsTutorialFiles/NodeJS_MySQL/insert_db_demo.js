@@ -41,7 +41,7 @@ con.connect(function (err) {
         "VALUES ('Michelle', 'Blue Village 1')";
     con.query(sql2, function (err, result) {
         if (err) throw err;
-        console.log("1 record inserted, ID:" + result.insertID);
+        console.log("1 record inserted, ID:" + result.insertId);
     });
     // NOTE: To be able to get the inserted id, 
     // only one row can be inserted.
