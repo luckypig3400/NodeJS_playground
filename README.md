@@ -93,6 +93,10 @@ con.connect(function(err) {
   });
 });
 ```
+---
+
+## 模仿Google Doc建立自己的線上文件編輯系統
++ [How To Build A Google Docs Clone With React, Socket.io, and MongoDB](https://www.youtube.com/watch?v=iRaelG7v0OU)
 
 ---
 
@@ -102,6 +106,8 @@ Type in Command Line
 npx create-react-app [your_project_name]
 ```
 + Ref: 3:36 => https://www.youtube.com/watch?v=iRaelG7v0OU
+
+---
 
 ## 使用express generator建立express專案
 前置作業
@@ -114,6 +120,7 @@ express [your_project_name]
 ```
 + Ref: https://developer.mozilla.org/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment#installing_the_express_application_generator
 
+---
 
 ## Search Keywords
 + node js async function
