@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Document = require('./Document');
 
 mongoose.connect('mongodb://localhost/google-docs-clone', {
     useNewUrlParser: true,
@@ -28,3 +29,14 @@ io.on("connection", socket => {
     });
 
 });
+
+const defaultValue = "";
+
+async function findOrCreateDocument(id) {
+    if (id == null) return
+
+    const document = await Document.findById(id);
+
+    if (document) return document;
+    return await Document.create({ _id: id, data: defaultValue });
+}
