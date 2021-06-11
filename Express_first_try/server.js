@@ -21,7 +21,15 @@ app.get('/process_get', urlencodedParser, function (req, res) {
     res.end(JSON.stringify(response));
 });
 
-
+app.post('/process_post', urlencodedParser, function (req, res) {
+    //輸出JSON格式
+    var response = {
+        "first_name": req.body.first_name,
+        "last_name": req.body.last_name
+    };
+    console.log(response);
+    res.end(JSON.stringify(response));
+});
 
 var server = app.listen(8081, function () {
 
