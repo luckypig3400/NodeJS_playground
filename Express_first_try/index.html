@@ -8,8 +8,18 @@
         <title>Name Form</title>
     </head>
 
-    <body>
+    <body align="center">
+        <h3>GET 表單範例</h3>
         <form action="http://127.0.0.1:8081/process_get" method="GET">
+            First Name: <input type="text" name="first_name"><br>
+            Last Name: <input type="text" name="last_name"><br>
+            <input type="submit">
+        </form>
+
+        <br><br><br>
+
+        <h3>POST 表單範例</h3>
+        <form action="/process_post" method="POST">
             First Name: <input type="text" name="first_name"><br>
             Last Name: <input type="text" name="last_name"><br>
             <input type="submit">
