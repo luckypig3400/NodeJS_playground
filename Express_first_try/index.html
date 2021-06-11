@@ -18,13 +18,17 @@
             <input type="submit">
         </form>
 
-        <br><br><br>
-
         <h3>POST 表單範例</h3>
         <form action="/process_post" method="POST">
             First Name: <input type="text" name="first_name"><br>
             Last Name: <input type="text" name="last_name"><br>
             <input type="submit">
+        </form>
+
+        <h3>文件上傳表單</h3>
+        <form action="/file_unpload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" id="50">
+            <br><input type="submit" value="上傳文件">
         </form>
     </body>
 
