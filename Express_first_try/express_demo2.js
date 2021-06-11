@@ -23,6 +23,13 @@ app.get('/list_user', function (req, res) {
     res.send("<h3>用戶清單</h3><table><th>用戶名稱</th><th>用戶IP</th></table>");
 })
 
+app.get('/ab*cd', function (req, res) {
+    console.log("/ab*cd GET 請求");
+    res.send('正則匹配');
+})
+
+
+
 var server = app.listen(8081, function () {
 
     var host = server.address().address;
