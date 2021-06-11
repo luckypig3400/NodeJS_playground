@@ -17,8 +17,8 @@ app.post('/file_upload', function (req, res) {
 
     console.log(req.files[0]);
 
-    var des_file = __dirname + "/" + req.files[0].originalname;
-
+    var des_file = __dirname + "/uploaded_files/" + req.files[0].originalname;
+    //若要設定上傳檔案存放路徑，要先建立該資料夾!!!
     fs.readFile(req.files[0].path, function (err, data) {
         fs.writeFile(des_file, data, function (err) {
             if (err) {
