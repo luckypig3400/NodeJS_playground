@@ -1,3 +1,4 @@
+//https://www.section.io/engineering-education/nodejs-ejs/
 const express = require('express');
 const router = express.Router();
 const posts = [
@@ -25,6 +26,14 @@ const posts = [
 // Returns a list of posts to the view.
 router.get('/', function (req, res, next) {
     res.render('index', { title: 'Express', posts: posts });
+});
+
+router.get('/404', function (req, res) {
+    res.render('index',
+        {
+            title: '404 Not Found',
+            post: 'Oops! 404'
+        });
 });
 
 module.exports = router;
