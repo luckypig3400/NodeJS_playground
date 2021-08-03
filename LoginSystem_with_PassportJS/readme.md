@@ -8,3 +8,6 @@
 npm i express express-session express-ejs-layouts connect-flash passport passport-local mongoose bcrypt ejs
 ```
 
+2. Define routes and add app.js(main entry point)
+
+3. 
