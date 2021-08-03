@@ -10,4 +10,4 @@ npm i express express-session express-ejs-layouts connect-flash passport passpor
 
 2. Define routes and add app.js(main entry point)
 
-3. 
+3. Add views (for login,register and welcome page)
