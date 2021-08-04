@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 //Routes
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
+app.use(express.static('public'));
 
 app.listen(3000, function(){
     console.log('Server start at http://localhost:3000');
