@@ -11,3 +11,7 @@ npm i express express-session express-ejs-layouts connect-flash passport passpor
 2. Define routes and add app.js(main entry point)
 
 3. Add views (for login,register and welcome page)
+
+4. Create User Schema and Handle POST
+
+5. Display the errors from Register Page
