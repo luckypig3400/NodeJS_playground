@@ -51,6 +51,21 @@ router.post('/register', (req, res) => {
                     email: email,
                     password: password
                 });
+
+                //hash password
+                bcrypt.genSalt(10, (err, salt) =>
+                    bcrypt.hash(newUser.password, salt,
+                        (err, hash) => {
+                            if (err) throw err;
+                            //save PWD to hash
+                            newUser.password = hash;
+                            //save new user
+                            newUser.save().then((value) => {
+                                console.log(value);
+                                res.redirect('/users/login');
+                            }).catch(value => console.log(value));
+                        })
+                )
             }
         });
     }
