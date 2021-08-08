@@ -3,6 +3,8 @@ const router = express.Router();
 const app = express();
 const mongoose = require('mongoose');
 const expresEjsLayout = require('express-ejs-layouts');
+const flash = require('connect-flash');
+const session = require('express-session');
 
 //mongoose
 mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true, useUnifiedTopology: true })
