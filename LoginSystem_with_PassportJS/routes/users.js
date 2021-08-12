@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require("../models/user");
 const bcrypt = require('bcrypt');
-const passport = require('../config/passport');
+const passport = require('passport');
 //login handle
 router.get('/login', (req, res) => {
     res.render('login');
