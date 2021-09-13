@@ -122,6 +122,11 @@ express [your_project_name]
 
 ---
 
+## Node.js_Tutorial_for_Beginners_Learn_Node_in_1_Hour
++ https://www.youtube.com/watch?v=TlB_eWDSMt4
+
+---
+
 ## Search Keywords
 + node js async function
 + npx create-react-app
