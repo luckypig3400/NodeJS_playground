@@ -35,8 +35,8 @@ fs.readdir('C:/', function (err, files) {
 console.log('Event moudule practice:');
 const emitter = new EventEmitter(); // Create emitter object
 // Register a listener
-emitter.on('messageLogged', function () {
-    console.log('Wow messageLogged printed by event Listener');
+emitter.on('messageLogged', function (eventArg) {// arg, e, eventArg are the same thing
+    console.log('MessageLogged Listener received:', eventArg);
 })
 // Raise an event
-emitter.emit('messageLogged');
+emitter.emit('messageLogged', { id: 1, url: 'https://www.youtube.com/watch?v=TlB_eWDSMt4' });
