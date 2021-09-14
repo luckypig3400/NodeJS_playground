@@ -40,3 +40,9 @@ emitter.on('messageLogged', function (eventArg) {// arg, e, eventArg are the sam
 })
 // Raise an event
 emitter.emit('messageLogged', { id: 1, url: 'https://www.youtube.com/watch?v=TlB_eWDSMt4' });
+
+emitter.on('logging', (e) => {// callback function can use arrow function like this
+    console.log("Logging event emitted! Here's the message:", e);
+})
+// Raise an logging event practice
+emitter.emit('logging', { data: 'message from Mars xD', time: Date.now() });
