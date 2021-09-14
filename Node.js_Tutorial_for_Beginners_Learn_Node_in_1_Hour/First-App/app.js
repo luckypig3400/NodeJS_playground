@@ -14,3 +14,7 @@ console.log(pathObj);
 
 console.log('Using OS module to see OS info:');
 console.log('Free RAM size:' + os.freemem() / 1024 / 1024 + 'MB');
+var totalMemory = os.totalmem();
+var freeMemory = os.freemem();
+console.log(`Free Memory: ${freeMemory}\nTotal Memory: ${totalMemory}\n
+    Remaining Percent: ${freeMemory / totalMemory * 100}%`);// new way to 
