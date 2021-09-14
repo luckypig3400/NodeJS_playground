@@ -1,6 +1,7 @@
 const logger = require('./logger'); // use const to avoid reassign var by mistake
 const path = require('path');
 const os = require('os');
+const fs = require('fs');
 
 console.log('See mudule Obj:');
 console.log(logger); // see property of a module
@@ -17,4 +18,8 @@ console.log('Free RAM size:' + os.freemem() / 1024 / 1024 + 'MB');
 var totalMemory = os.totalmem();
 var freeMemory = os.freemem();
 console.log(`Free Memory: ${freeMemory}\nTotal Memory: ${totalMemory}\n
-    Remaining Percent: ${freeMemory / totalMemory * 100}%`);// new way to 
+    Remaining Percent: ${freeMemory / totalMemory * 100}%`);// new way to output variable in console
+
+console.log('File System module pratice(Sync):');
+const files = fs.readdirSync('./');
+console.log('Files in curent folder:' , files);
