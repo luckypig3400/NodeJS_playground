@@ -2,6 +2,7 @@ const logger = require('./logger'); // use const to avoid reassign var by mistak
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
+const EventEmitter = require('events');
 
 console.log('See mudule Obj:');
 console.log(logger); // see property of a module
@@ -27,5 +28,11 @@ console.log('Files in curent folder:', files);
 console.log('File System module pratice(Asynchronous):');
 fs.readdir('C:/', function (err, files) {
     if (err) console.log('!Error:' + err);
-    else console.log('Files in C:' , files);
+    else console.log('Files in C:', files);
 });
+// !重要 盡量用Asynchronous方法才不會造成執行序阻塞
+
+console.log('Event moudule practice:');
+const emitter = new EventEmitter(); // Create emitter object
+// Raise an event
+emitter.emit('messageLogged');
