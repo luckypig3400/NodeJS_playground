@@ -21,5 +21,11 @@ console.log(`Free Memory: ${freeMemory}\nTotal Memory: ${totalMemory}\n
     Remaining Percent: ${freeMemory / totalMemory * 100}%`);// new way to output variable in console
 
 console.log('File System module pratice(Sync):');
-const files = fs.readdirSync('./');
-console.log('Files in curent folder:' , files);
+var files = fs.readdirSync('./');
+console.log('Files in curent folder:', files);
+
+console.log('File System module pratice(Asynchronous):');
+fs.readdir('C:/', function (err, files) {
+    if (err) console.log('!Error:' + err);
+    else console.log('Files in C:' , files);
+});
