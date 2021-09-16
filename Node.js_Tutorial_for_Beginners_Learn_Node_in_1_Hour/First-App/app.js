@@ -1,4 +1,5 @@
-const logger = require('./logger'); // use const to avoid reassign var by mistake
+const Logger = require('./logger'); // use const to avoid reassign var by mistake
+const logger = new Logger();
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
@@ -34,15 +35,17 @@ fs.readdir('C:/', function (err, files) {
 
 console.log('Event moudule practice:');
 const emitter = new EventEmitter(); // Create emitter object
-// Register a listener
-emitter.on('messageLogged', function (eventArg) {// arg, e, eventArg are the same thing
-    console.log('MessageLogged Listener received:', eventArg);
-})
-// Raise an event
-emitter.emit('messageLogged', { id: 1, url: 'https://www.youtube.com/watch?v=TlB_eWDSMt4' });
-
+//Add an event listener
 emitter.on('logging', (e) => {// callback function can use arrow function like this
     console.log("Logging event emitted! Here's the message:", e);
 })
 // Raise an logging event practice
 emitter.emit('logging', { data: 'message from Mars xD', time: Date.now() });
+
+console.log('Extending Event moudule practice:');
+// Register a listener for logger object
+logger.on('messageLogged', function (eventArg) {// arg, e, eventArg are the same thing
+    console.log('MessageLogged Listener received:', eventArg);
+})
+// execute logger's method
+logger.log('This is a message from logger');
