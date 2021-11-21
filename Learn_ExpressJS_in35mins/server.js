@@ -9,14 +9,6 @@ app.get('/', (req, res) => {
     // res.status(200);//500代表internal server error
 });
 
-app.get("/users", (req, res) => {
-    res.send("<h1>Users List</h1>");
-});
-
-app.get("/users/new", (req, res) => {
-    res.send("<h1>User Register Form</h1>");
-});
-
 app.get('/download', (req, res) => {
     res.download("server.js");
     console.log("Someone download the server file");
@@ -29,5 +21,8 @@ app.get('/jsonExample', (req, res) => {
     });
     console.log("Someone just see test json message");
 });
+
+const userRouter = require("./routes/users");
+app.use("/users", userRouter);
 
 app.listen(3000);
