@@ -31,6 +31,7 @@ router.post("/", (req, res) => {
 // Express provides an easier way to do the same route but different http methods like the code commented above
 router.route("/:id")
     .get((req, res) => {
+        console.log(req.user);// output result from the middware
         res.send(`Get User with ID:${req.params.id}`);
     })
     .put((req, res) => {
@@ -39,5 +40,11 @@ router.route("/:id")
     .delete((req, res) => {
         res.send(`Delete User With ID:${req.params.id}`);
     })
+
+const users = [{ name: "Kyle" }, { name: "Sally" }, { name: "YuRou" }, { name: "YaoCheng" }];
+router.param("id", (req, res, next, id) => {
+    req.user = users[id];
+    next();// continue to run the following codes for this route
+});
 
 module.exports = router;
