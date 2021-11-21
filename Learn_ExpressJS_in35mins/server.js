@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
 
+app.set("view engine", "ejs");
+
 app.get('/', (req, res) => {
     console.log("Someone visit /");
-    res.send("<h1>Hi~</h1> Everything is fine~ <a href='./download'>Download server file</a><br><a href='./jsonExample'>Show json</a>");
-    res.status(200);//500代表internal server error
+    res.render("index");
+    // res.status(200);//500代表internal server error
 });
 
 app.get('/download', (req, res) => {
