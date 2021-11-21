@@ -5,8 +5,16 @@ app.set("view engine", "ejs");
 
 app.get('/', (req, res) => {
     console.log("Someone visit /");
-    res.render("index", {username: "Leonardo da Vinci"});
+    res.render("index", { username: "Leonardo da Vinci" });
     // res.status(200);//500代表internal server error
+});
+
+app.get("/users", (req, res) => {
+    res.send("<h1>Users List</h1>");
+});
+
+app.get("/users/new", (req, res) => {
+    res.send("<h1>User Register Form</h1>");
 });
 
 app.get('/download', (req, res) => {
