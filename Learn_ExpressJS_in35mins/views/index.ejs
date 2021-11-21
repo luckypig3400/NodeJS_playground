@@ -9,8 +9,9 @@
     </head>
 
     <body>
-        <h1>Hi~ <%= username %>
+        <h1>Hi~ <%= locals.username || "Default User" %>
         </h1>
+        <!-- use locals.variableName to avoid undefined error -->
         Everything is fine~<br>
         <a href="./download">Download server file</a>
         <br><a href="./jsonExample">Show json</a>
