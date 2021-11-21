@@ -5,7 +5,7 @@ app.set("view engine", "ejs");
 
 app.get('/', (req, res) => {
     console.log("Someone visit /");
-    res.render("index");
+    res.render("index", {username: "Leonardo da Vinci"});
     // res.status(200);//500代表internal server error
 });
 
