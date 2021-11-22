@@ -15,9 +15,18 @@ router.get("/new", (req, res) => {
 // Because the code is run from top to down ~~~
 
 router.post("/", (req, res) => {
-    var newUserName = req.body.firstName;
-    res.send("Create User with name:" + newUserName + `<h1>Hi~ ${newUserName} </h1>`);
-    console.log(newUserName);
+    const isValid = true;
+    if (isValid) {
+        var newUserName = req.body.firstName;
+        console.log(newUserName);
+
+        users.push({ firstName: req.body.firstName });
+        res.redirect(`/users/${users.length - 1}`);
+    } else {
+        console.log("Error");
+        res.render("users/new", { firstName: req.body.firstName });
+    }
+
 });
 
 // router.get("/:id", (req, res) => {
@@ -51,7 +60,7 @@ router.param("id", (req, res, next, id) => {
     next();// continue to run the following codes for this route
 });
 
-function usersLogger(req,res,next){
+function usersLogger(req, res, next) {
     console.log(req.originalUrl);
     next();
 }
