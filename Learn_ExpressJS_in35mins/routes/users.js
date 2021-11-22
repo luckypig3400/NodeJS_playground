@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/new", (req, res) => {
-    res.send("<h1>User Register Form</h1>");
+    res.render("users/new");
 });
 // To avoid dynamic route block your specific routes,
 // you should put your dynamic route code below specific one
