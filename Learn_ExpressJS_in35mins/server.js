@@ -1,10 +1,11 @@
 const express = require("express");
 const app = express();
 
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));// use this code for parsing request body
+
 app.set("view engine", "ejs");
 // app.use(logger);// use Middleware "logger" globally
-
-app.use(express.static("public"));
 
 app.get('/', (req, res) => {
     console.log("Someone visit /");

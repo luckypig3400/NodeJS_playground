@@ -15,7 +15,9 @@ router.get("/new", (req, res) => {
 // Because the code is run from top to down ~~~
 
 router.post("/", (req, res) => {
-    res.send("Create User");
+    var newUserName = req.body.firstName;
+    res.send("Create User with name:" + newUserName + `<h1>Hi~ ${newUserName} </h1>`);
+    console.log(newUserName);
 });
 
 // router.get("/:id", (req, res) => {
