@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 app.set("view engine", "ejs");
-app.use(logger);// use Middleware logger globally
+// app.use(logger);// use Middleware "logger" globally
 
 app.get('/', (req, res) => {
     console.log("Someone visit /");
@@ -10,7 +10,9 @@ app.get('/', (req, res) => {
     // res.status(200);//500代表internal server error
 });
 
-app.get('/download', (req, res) => {
+app.get('/download', logger, logger, logger, (req, res) => {
+    // you can use multiple middlewares like the code above
+    // use middleware "logger" just for "/download" get route
     res.download("server.js");
     console.log("Someone download the server file");
 });
