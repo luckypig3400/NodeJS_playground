@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+router.use(usersLogger);//use middleware for all "/users" routes
+
 router.get("/", (req, res) => {
     res.send("<h1>Users List</h1>");
 });
@@ -46,5 +48,10 @@ router.param("id", (req, res, next, id) => {
     req.user = users[id];
     next();// continue to run the following codes for this route
 });
+
+function usersLogger(req,res,next){
+    console.log(req.originalUrl);
+    next();
+}
 
 module.exports = router;
