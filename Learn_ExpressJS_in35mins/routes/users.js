@@ -4,7 +4,10 @@ const router = express.Router();
 router.use(usersLogger);//use middleware for all "/users" routes
 
 router.get("/", (req, res) => {
-    res.send("<h1>Users List</h1>");
+    console.log(req.query.name);// Parse Query Params
+    // http://localhost:3000/users?name=OwO
+    // Try visit the link above and change name to something else
+    res.send("<h1>Users List</h1> Hi~ " + req.query.name);
 });
 
 router.get("/new", (req, res) => {
