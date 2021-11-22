@@ -4,6 +4,8 @@ const app = express();
 app.set("view engine", "ejs");
 // app.use(logger);// use Middleware "logger" globally
 
+app.use(express.static("public"));
+
 app.get('/', (req, res) => {
     console.log("Someone visit /");
     res.render("index", { username: "Leonardo da Vinci" });
